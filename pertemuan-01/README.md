@@ -3,7 +3,7 @@ Bukti Belajar P1
 Fungsi: dokumentasi capaian pembelajaran P1
 
 1. Konsep Dasar Pemrograman Web
-Pemrograman Web adalah proses membuat dan mengembkan wesite yang dapat diakses melalui internet atau jaringan lokal
+Pemrograman Web adalah proses membuat dan mengembangkan website yang dapat diakses melalui internet atau jaringan lokal
 2. Arsitektur Klien-Peladen
 Arsitektur Klien-Peladen (client-server) adalah sistem dimana client meminta layanan atau data kepada server
 3. HTTP Request dan Response
