@@ -13,8 +13,8 @@ elemen semantik, teks, daftar, tautan, dan gambar.
 ## Validasi HTML
 - Berkas yang divalidasi: `index.html`
 - Galat yang ditemukan: [tuliskan jika ada]
-- Perbaikan yang dilakukan: [tuliskan]
-- Hasil validasi akhir: [tuliskan hasil]
+- Perbaikan yang dilakukan: [memperbaiki struktur html dengan menambahkan poto]
+- Hasil validasi akhir: [tidak ditemukan eror]
 
 ## GitHub Pages
 URL: [https://github.com/2611500023-aidilfitra/2611500023_AidilFitra-PWD-TI1A-2627/tree/main/pertemuan-02]
