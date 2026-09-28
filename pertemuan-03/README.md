@@ -19,18 +19,18 @@
 
 ## CSS Dasar
 
-- Selector elemen: [tuliskan]
-- Selector class: [tuliskan]
-- Selector ID: [tuliskan]
+- Selector elemen: [tidak ada menggunakan selector elemen css]
+- Selector class: ["form-group" "input-form"]
+- Selector ID: [#about, #about h2, #about h3, #about p, #about ol, #contact, #contact h2, .form-group, #contact label, .input-form, #contact button]
 - Properti CSS dasar yang digunakan: [color, background / background-color, font, margin, padding, border.]
 
 ## Pengujian dan Perbaikan
 
-- Galat yang ditemukan: [tuliskan jika ada]
-- Penyebab galat: [tuliskan]
-- Perbaikan yang dilakukan: [tuliskan]
-- Hasil pengujian ulang: [tuliskan]
+- Galat yang ditemukan: [tidak ada, kecuali pembelajaran pada modul mencoba memakai kata perintah method="post"]
+- Penyebab galat: [tidak ada, kecuali pembelajaran pada modul mencoba memakai kata perintah method="post" karna method="post" tidak terdeteksi ke sebuah data wbesite]
+- Perbaikan yang dilakukan: [mengembalikan method="post" ke method="get" seperti langkah-langkah dimodul p3 ]
+- Hasil pengujian ulang: [setelah dikembali menjadi method="get" dan mengisi form diweb, setelah mengisi lihat perubahan pada url]
 
 ## GitHub Pages
 
-URL: [tempel URL GitHub Pages Pertemuan 3]
+URL: [https://2611500023-aidilfitra.github.io/2611500023_AidilFitra-PWD-TI1A-2627/pertemuan-03/]
