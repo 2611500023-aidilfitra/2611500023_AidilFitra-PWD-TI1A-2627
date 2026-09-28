@@ -13,9 +13,9 @@
 
 ## Pengujian GET dan POST
 
-- Hasil pengujian GET: [data formulir dikirim menggunakan pasangan name=value, parameter dapat diamati pada query string URL, URL encoding dapat diamati pada data yang dikirim.]
+- Hasil pengujian GET: [https://2611500023-aidilfitra.github.io/2611500023_AidilFitra-PWD-TI1A-2627/pertemuan-03/index.html?nama=aidil+fitra&email=2611500023%40mahasiswa.atmaluhur.ac.id&semester=1&tanggal=2026-09-30&jenis_pesan=pertanyaan&minat=HTML&prodi=TI&pesan=ahahah]
 - Contoh URL encoding yang ditemukan: [tuliskan]
-- Hasil pengujian POST: [Pada P3, pengujian POST dilakukan untuk memahami mekanisme pengiriman data tanpa pemrosesan data menggunakan PHP atau peladen aplikasi.]
+- Hasil pengujian POST: []
 
 ## CSS Dasar
 
