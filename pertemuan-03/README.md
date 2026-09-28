@@ -14,8 +14,8 @@
 ## Pengujian GET dan POST
 
 - Hasil pengujian GET: [https://2611500023-aidilfitra.github.io/2611500023_AidilFitra-PWD-TI1A-2627/pertemuan-03/index.html?nama=aidil+fitra&email=2611500023%40mahasiswa.atmaluhur.ac.id&semester=1&tanggal=2026-09-30&jenis_pesan=pertanyaan&minat=HTML&prodi=TI&pesan=ahahah]
-- Contoh URL encoding yang ditemukan: [tuliskan]
-- Hasil pengujian POST: []
+- Contoh URL encoding yang ditemukan: [nama=aidil+fitra&email=2611500023%40mahasiswa.atmaluhur.ac.id&semester=1&tanggal=2026-09-30&jenis_pesan=pertanyaan&minat=HTML&prodi=TI&pesan=ahahah]
+- Hasil pengujian POST: [Github pages menolak dengan permintaan post menampilkan respon galat yang berisi (405 Not Allowed)]
 
 ## CSS Dasar
 
