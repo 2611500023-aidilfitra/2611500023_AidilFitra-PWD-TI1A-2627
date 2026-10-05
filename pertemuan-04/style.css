@@ -24,6 +24,19 @@ header h1 {
   font-size: 28px;
 }
 
+nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 8px;
+}
+
+nav a {
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
 section {
   width: 100%;
 }
