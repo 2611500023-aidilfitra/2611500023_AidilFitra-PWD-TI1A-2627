@@ -2,18 +2,18 @@
 
 ## Pengembangan
 
-- Perubahan yang dilakukan: [tuliskan secara singkat]
-- Commit dan push GitHub: [tuliskan secara singkat]
+- Perubahan yang dilakukan: [Merubah penampilan web dengan lebih menarik sesuai di modul P4, Memisahkan CSS dari index.html ke dalam style.css, Menerapkan CSS Box Model pada elemen halaman, mengubah struktur tata letak web dari 1 kolom vertical menjadi 2 kolom berdampingan yang dimana kolom "selamat datang" berada di kolom kiri, dan "tentang saya" berada dikolom kanan dan kolom "kontak" berada di bawah kolom "selamat datang" dan "tentang saya", pada bagian header/navigasi judul "Profil Mahasiswa" ditambahkan warna biru tua, Penerapan CSS Box]
+- Commit dan push GitHub: []
 
 ## Pengujian
 
-- Perangkat bergerak: [ukuran viewport dan hasil pengujian]
-- Desktop: [ukuran viewport dan hasil pengujian]
-- Galat dan perbaikan: [tuliskan jika ada]
-- Validasi CSS: [hasil validasi dan perbaikan yang dilakukan jika terdapat galat]
+- Perangkat bergerak: [viewport kurang dari 768px. navigasi Beranda, Tentang, dan Kontak tersusun secara vertikal, bagian Home, Tentang Saya, dan Contact tersusun dalam satu kolom, seluruh konten tetap dapat ditampilkan dan digunakan dengan baik]
+- Desktop: [viewport 768px atau lebih. navigasi Beranda, Tentang, dan Kontak tersusun secara horisontal, bagian Home dan Tentang Saya tersusun dalam dua kolom, bagian Contact membentang dari kolom pertama hingga kolom terakhir, jarak antar-elemen tetap sesuai dengan aturan CSS]
+- Galat dan perbaikan: [tidak ada]
+- Validasi CSS: [tidak ada eror dan tidak ada perbaikan galat]
 
 ## Repositori
 
-URL GitHub: [tempel URL repositori]
+URL GitHub: [https://github.com/2611500023-aidilfitra/2611500023_AidilFitra-PWD-TI1A-2627]
 Isi README.md berdasarkan hasil pengembangan, pengujian, dan validasi yang benar - benar
 dilakukan.
