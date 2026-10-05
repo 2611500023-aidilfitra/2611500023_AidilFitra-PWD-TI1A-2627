@@ -2,8 +2,8 @@
 
 ## Pengembangan
 
-- Perubahan yang dilakukan: [Merubah penampilan web dengan lebih menarik sesuai di modul P4, Memisahkan CSS dari index.html ke dalam style.css, Menerapkan CSS Box Model pada elemen halaman, mengubah struktur tata letak web dari 1 kolom vertical menjadi 2 kolom berdampingan yang dimana kolom "selamat datang" berada di kolom kiri, dan "tentang saya" berada dikolom kanan dan kolom "kontak" berada di bawah kolom "selamat datang" dan "tentang saya", pada bagian header/navigasi judul "Profil Mahasiswa" ditambahkan warna biru tua, Penerapan CSS Box]
-- Commit dan push GitHub: []
+- Perubahan yang dilakukan: [Merubah penampilan web dengan lebih menarik sesuai di modul P4, Memisahkan CSS dari index.html ke dalam style.css, Menerapkan CSS Box Model pada elemen halaman, mengubah struktur tata letak web dari 1 kolom vertical menjadi 2 kolom berdampingan yang dimana kolom "selamat datang" berada di kolom kiri, dan "tentang saya" berada dikolom kanan dan kolom "kontak" berada di bawah kolom "selamat datang" dan "tentang saya", pada bagian header/navigasi judul "Profil Mahasiswa" ditambahkan warna biru tua, menambahkan margin, padding, border, dan width/height pada elemen halaman web.]
+- Commit dan push GitHub: [(git add ., git commit - m "Pisahkan CSS dari HTML pada P4", git push,) (git add ., git commit - m "Terapkan Box Model pada P4", git push) (git add ., git commit - m "Terapkan penataan elemen halaman pada P4", git push) (git add ., git commit - m "Terapkan Flexbox pada navigasi P4", git push) (git add ., git commit - m "Terapkan CSS Grid pada tata letak P4", git push) (git add ., git commit - m "Terapkan desain web responsif P4", git push) ]
 
 ## Pengujian
 
