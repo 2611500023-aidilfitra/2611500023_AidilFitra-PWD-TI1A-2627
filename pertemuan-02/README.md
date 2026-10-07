@@ -16,7 +16,7 @@ elemen semantik, teks, daftar, tautan, dan gambar.
 
 - Berkas yang divalidasi: `index.html`
 - Galat yang ditemukan: [tuliskan jika ada]
-- Perbaikan yang dilakukan: [identifikasi pesan galat, perbaiki kode, lakukan validasi ulang, pastikan galat telah terselesaikan.]
+- Perbaikan yang dilakukan: [tidak ada eror dan tidak ada perbaikan]
 - Hasil validasi akhir: [Validasi index.html menggunakan W3C Markup Validation Service.]
 
 ## GitHub Pages
