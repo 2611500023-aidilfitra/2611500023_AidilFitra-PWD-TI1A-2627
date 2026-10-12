@@ -17,8 +17,8 @@ elemen semantik, teks, daftar, tautan, dan gambar.
 - Berkas yang divalidasi: `index.html`
 - Galat yang ditemukan: [tuliskan jika ada]
 - Perbaikan yang dilakukan: [tidak ada eror dan tidak ada perbaikan]
-- Hasil validasi akhir: [Validasi index.html menggunakan W3C Markup Validation Service.]
+- Hasil validasi akhir: [Menampilkan berwarna hijau di W3C Markup Validation Service dan tulisannya "Document checking completed. No erros or warnings to show. ]
 
 ## GitHub Pages
 
-URL: [https://github.com/2611500023-aidilfitra/2611500023_AidilFitra-PWD-TI1A-2627/tree/main/pertemuan-02]
+URL: [https://2611500023-aidilfitra.github.io/2611500023_AidilFitra-PWD-TI1A-2627/pertemuan-02/]
