@@ -1,7 +1,6 @@
 * {
   box-sizing: border-box;
 }
-
 body {
   margin: 0;
   padding: 12px;
@@ -9,7 +8,6 @@ body {
   color: #111827;
   background-color: #eef2f7;
 }
-
 /* Header */
 header {
   background-color: #003366;
@@ -18,70 +16,91 @@ header {
   margin-bottom: 20px;
   border: 1px solid #00264d;
 }
-
 header h1 {
-  margin: 0 0 16px;
+  margin: 0;
   font-size: 28px;
 }
-
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#navMenu {
+  display: none;
+}
+#navMenu.nav-open {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+}
+.nav-toggle {
+  display: block;
+  border: none;
+  background: transparent;
+  color: #ffffff;
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
+}
+/* Navigasi */
 nav ul {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 8px;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
-
 nav a {
   color: #ffffff;
   font-weight: bold;
   text-decoration: none;
 }
-
+/* Layout utama */
 main {
   display: grid;
   grid-template-columns: 1fr;
   gap: 16px;
 }
-
 section {
   width: 100%;
 }
-
+/* Bagian Home */
 #home {
   background-color: #ffffff;
   border: 1px solid #d0d7de;
   padding: 20px;
   margin: 0;
-
-  #home h2 {
-    color: #003366;
-    border-bottom: 2px solid #003366;
-    padding-bottom: 6px;
-    margin-top: 0;
-    margin-bottom: 16px;
-  }
-  #home p {
-    line-height: 1.6;
-    margin: 0 0 16px;
-  }
-  #home img {
-    display: block;
-    width: 240px;
-    max-width: 100%;
-    height: auto;
-    border: 1px solid #cbd5e1;
-  }
 }
-
+#home h2 {
+  color: #003366;
+  border-bottom: 2px solid #003366;
+  padding-bottom: 6px;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+#home p {
+  line-height: 1.6;
+  margin: 0 0 16px;
+}
+#home img {
+  display: block;
+  width: 240px;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #cbd5e1;
+}
+/* Bagian Tentang */
 #about {
   background-color: #ffffff;
   border: 1px solid #d0d7de;
   padding: 20px;
   margin: 0;
-  font-family: Arial, sans-serif;
 }
 #about h2 {
-  color: #1470cb;
+  color: #003366;
   border-bottom: 2px solid #003366;
   padding-bottom: 6px;
   margin-top: 0;
@@ -92,10 +111,10 @@ section {
   margin-bottom: 6px;
 }
 #about p {
-  line-height: 1.5;
   margin: 6px 0;
   padding: 6px 0;
   border-bottom: 1px solid #e6e6e6;
+  line-height: 1.5;
 }
 #about ol {
   color: #333333;
@@ -103,14 +122,12 @@ section {
   padding: 8px 24px;
   border: 1px solid #e6e6e6;
 }
+/* Bagian Kontak */
 #contact {
   background-color: #f8fafc;
   border: 1px solid #cbd5e1;
   padding: 20px;
   margin: 0;
-  margin: 20px 0;
-  font-family: Arial, sans-serif;
-  grid-column: 1 / -1;
 }
 #contact h2 {
   color: #003366;
@@ -126,8 +143,9 @@ section {
   color: #1f2937;
   font-weight: bold;
 }
-
 .input-form {
+  width: 100%;
+  max-width: 100%;
   background-color: #ffffff;
   color: #111827;
   font-family: Arial, sans-serif;
@@ -135,23 +153,20 @@ section {
   padding: 8px;
   margin: 4px 0;
   border: 1px solid #94a3b8;
-  width: 100%;
-  max-width: 100%;
 }
 #contact textarea {
   min-height: 80px;
   resize: vertical;
 }
 #contact button {
-  cursor: pointer;
   background-color: #003366;
   color: #ffffff;
   font-weight: bold;
   padding: 8px 14px;
   margin: 8px 6px 0 0;
-  border: 1px solid #1c1d1f;
+  border: 1px solid #003366;
+  cursor: pointer;
 }
-
 /* Footer */
 footer {
   background-color: #003366;
@@ -164,20 +179,34 @@ footer {
 footer p {
   margin: 0;
 }
+.form-feedback-error {
+  color: #c62828;
+}
+.form-feedback-success {
+  color: #2e7d32;
+}
+/* Layout untuk viewport yang lebih lebar */
 @media (min-width: 768px) {
-  /* aturan CSS untuk viewport dengan lebar minimal 768px */
-  main {
-    grid-template-columns: 1fr 1fr;
+  nav {
+    margin-top: 16px;
   }
-
   nav ul {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
     gap: 16px;
   }
-
+  main {
+    grid-template-columns: 1fr 1fr;
+  }
   #contact {
     grid-column: 1 / -1;
+  }
+  #navMenu {
+    display: flex;
+    flex-direction: row;
+  }
+  .nav-toggle {
+    display: none;
   }
 }
