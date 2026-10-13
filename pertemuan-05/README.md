@@ -30,8 +30,10 @@ Pengujian
 
 Catat perkembangan melalui commit Git yang bermakna.
 
-[Pesan commit]: Membuat dan menghubungkan JavaScript: Membuat file script.js dan mengintegrasikannya dengan index.html.<br>
-Menambahkan tombol hamburger: Membuat tombol menu untuk mengatur tampilan navigasi.<br>
-Mengatur tampilan CSS: Menambahkan desain hamburger menu, responsivitas layar, dan tampilan form.<br>
-Menerapkan fungsi JavaScript: Menggunakan beberapa fungsi DOM dan event untuk mengatur menu serta validasi form.<br>
-mengisi readme untuk dokumentasi: Menulis dokumentasi perubahan dan pengujian<br>
+[Pesan commit]:
+
+- Membuat dan menghubungkan JavaScript: Membuat file script.js dan mengintegrasikannya dengan index.html.<br>
+- Menambahkan tombol hamburger: Membuat tombol menu untuk mengatur tampilan navigasi.<br>
+- Mengatur tampilan CSS: Menambahkan desain hamburger menu, responsivitas layar, dan tampilan form.<br>
+- Menerapkan fungsi JavaScript: Menggunakan beberapa fungsi DOM dan event untuk mengatur menu serta validasi form.<br>
+- mengisi readme untuk dokumentasi: Menulis dokumentasi perubahan dan pengujian<br>
