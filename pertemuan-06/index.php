@@ -5,7 +5,9 @@ $nim = "2611500023";
 $namaMahasiswa = "Aidil Fitra";
 $programStudi = "TI";
 $tahunAkademik = "2026/2027";
-$semester = 1;
+// Bagian 2: Operator
+$batasSemester = 8;
+$sisaSemester = $batasSemester - $semester;
 $ipk = 3.75;
 $statusAktif = true;
 $catatanTambahan = null;
@@ -72,6 +74,7 @@ Komentar ini tidak ditampilkan pada halaman.
       <h2>Tentang Saya</h2>
       <article>
         <h3>Profil Singkat</h3>
+        <p>Sisa semester hingga batas: <?php echo $sisaSemester; ?></p>
         <p>Saya mahasiswa Program Studi Teknik Informatika</p>
 
         <h3>Target Belajar</h3>
