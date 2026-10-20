@@ -20,6 +20,8 @@ if ($semester < 3) {
 } else {
   $keteranganSemester = "Semester akhir";
 }
+$namaProdi = ($programStudi == "SI") ? "Sistem Informasi" : (($programStudi == "TI") ? "Teknik
+Informatika" : "Lainnya");
 $ipk = 3.75;
 $catatanTambahan = null;
 const NAMA_MATA_KULIAH = "Pemrograman Web Dasar";
@@ -85,6 +87,8 @@ Komentar ini tidak ditampilkan pada halaman.
       <h2>Tentang Saya</h2>
       <article>
         <h3>Profil Singkat</h3>
+        <p>Program Studi: <?php echo $namaProdi . " (" . $programStudi . ")"; ?></p>
+        <p>Status mahasiswa: <?php echo $statusAktif ? "Aktif" : "Tidak aktif"; ?></p>
         <p>Sisa semester hingga batas: <?php echo $sisaSemester; ?></p>
         <p>Semester: <?php echo $semester . " (" . $keteranganSemester . ")"; ?></p>
         <p>Pemeriksaan rentang semester: <?php echo $statusSemester; ?></p>
