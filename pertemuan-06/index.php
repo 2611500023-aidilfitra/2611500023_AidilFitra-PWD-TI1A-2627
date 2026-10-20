@@ -57,8 +57,9 @@ Komentar ini tidak ditampilkan pada halaman.
   <main>
     <section id="home">
       <h2>Selamat Datang</h2>
-      <p>
-        Halo, saya Aidil Fitra. Saya sedang mempelajari Pemrograman Web Dasar.
+      <p>Halo, saya <strong><?php echo $namaMahasiswa; ?></strong>. Saya sedang mempelajari matakuliah
+        <strong><?php print NAMA_MATA_KULIAH; ?></strong> pada tahun akademik <?php echo $tahunAkademik;
+                                                                              ?>.
       </p>
       <img
         src="img/foto-profil.jpg"
@@ -85,7 +86,7 @@ Komentar ini tidak ditampilkan pada halaman.
       <h2>Kontak</h2>
       <p>
         Kunjungi
-        <a href="https://github.com/2611500023-aidilfitra">profil GitHub saya</a>.
+        <a target="_blank" href="https://github.com/<?= PROFIL_GITHUB ?>">profil GitHub saya</a>.
       </p>
 
       <form id="contactForm" action="index.html" method="get" novalidate>
