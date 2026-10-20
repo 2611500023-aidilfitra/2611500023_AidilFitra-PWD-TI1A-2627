@@ -251,7 +251,7 @@ Komentar ini tidak ditampilkan pada halaman.
   </main>
 
   <footer>
-    <p>&copy; 2026 Aidil Fitra 2611500023</p>
+    <p>&copy; <?= date("Y") ?> <?php echo $namaMahasiswa; ?> [<?= $nim ?>]</p>
   </footer>
   <script src="script.js"></script>
 </body>
