@@ -1,4 +1,10 @@
 <?php
+// P7 : menangkap nilai dari input form
+echo $_GET["nama"] . " ";
+echo $_GET["email"] . " ";
+echo $_GET["semester"] . " ";
+
+
 // P6: PHP dasar dan pemrograman sisi peladen
 // Bagian 1: Variabel dan konstanta
 $nim = "2611500023";
@@ -7,6 +13,7 @@ $programStudi = "SI";
 $tahunAkademik = "2026/2027";
 $semester = 2;
 $statusAktif = true;
+$catatanTambahan = null;
 // Bagian 2: Operator
 $batasSemester = 8;
 $sisaSemester = $batasSemester - $semester;
@@ -34,9 +41,9 @@ switch ($programStudi) {
     $fokusProgramStudi = "Belum ditentukan";
 }
 $ipk = 3.75;
-$catatanTambahan = null;
+
 const NAMA_MATA_KULIAH = "Pemrograman Web Dasar";
-const PROFIL_GITHUB = "satpamal";
+const PROFIL_GITHUB = "2611500023-aidilfitra";
 ?>
 <!doctype html>
 <html lang="id">
@@ -49,14 +56,7 @@ const PROFIL_GITHUB = "satpamal";
 </head>
 
 <body>
-  <?php
-  // Komentar satu baris.
-  print "Keluaran menggunakan print.";
-  /*
-Komentar beberapa baris.
-Komentar ini tidak ditampilkan pada halaman.
-*/
-  ?>
+
   <header>
     <div class="header-top">
       <h1>Profil Mahasiswa</h1>
