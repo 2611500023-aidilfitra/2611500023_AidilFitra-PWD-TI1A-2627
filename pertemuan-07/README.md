@@ -4,3 +4,4 @@
 2. event.preventDefault(); ternyata menghalangi esksekusi submit
 3. mencoba superglobal &\_GET untuk nama, email, semester.
 4. mencoba superglobal &\_POST untuk nama, email, semester.
+5. menggunakan session untuk menyimpan hasil post formulir dan menulis output pada input value.

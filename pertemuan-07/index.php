@@ -1,9 +1,15 @@
 <?php
-// P7 : menangkap nilai dari input form
-echo $_POST["nama"] . " ";
-echo $_POST["email"] . " ";
-echo $_POST["semester"] . " ";
-
+session_start();
+// P7 : menangkap nilai dari input form, disimpan ke session
+if (isset($_POST["nama"]) && isset($_POST["email"]) && isset($_POST["semester"])) {
+  $_SESSION["nama"] = $_POST["nama"] . " ";
+  $_SESSION["email"] = $_POST["email"] . " ";
+  $_SESSION["semester"] = $_POST["semester"] . " ";
+}
+// P7 : nilai dari session disimpan ke dalam variabel lokal
+$nama = $_SESSION["nama"] ?? "";
+$email = $_SESSION["email"] ?? "";
+$semester = $_SESSION["semester"] ?? "";
 
 // P6: PHP dasar dan pemrograman sisi peladen
 // Bagian 1: Variabel dan konstanta
@@ -166,16 +172,18 @@ const PROFIL_GITHUB = "2611500023-aidilfitra";
             placeholder="Masukkan nama lengkap"
             minlength="3"
             maxlength="50"
+            value="<?php echo $nama; ?>"
             required />
         </div>
 
-        <div class="form-group">
+        <div class=" form-group">
           <label for="email">Email</label><br />
           <input
             class="input-form"
             type="email"
             id="email"
             name="email"
+            value="<?= $email; ?>"
             placeholder="nama@email.com"
             required />
         </div>
@@ -187,6 +195,7 @@ const PROFIL_GITHUB = "2611500023-aidilfitra";
             type="number"
             id="semester"
             name="semester"
+            value="<?= $semester; ?>"
             min="1"
             max="14"
             required />
