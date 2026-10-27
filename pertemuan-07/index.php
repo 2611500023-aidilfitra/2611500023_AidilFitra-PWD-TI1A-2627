@@ -1,8 +1,8 @@
 <?php
 // P7 : menangkap nilai dari input form
-echo $_GET["nama"] . " ";
-echo $_GET["email"] . " ";
-echo $_GET["semester"] . " ";
+echo $_POST["nama"] . " ";
+echo $_POST["email"] . " ";
+echo $_POST["semester"] . " ";
 
 
 // P6: PHP dasar dan pemrograman sisi peladen
@@ -155,7 +155,7 @@ const PROFIL_GITHUB = "2611500023-aidilfitra";
         <a target="_blank" href="https://github.com/<?= PROFIL_GITHUB ?>">profil GitHub saya</a>.
       </p>
 
-      <form id="contactForm" action="index.php" method="get" novalidate>
+      <form id="contactForm" action="index.php" method="post" novalidate>
         <div class="form-group">
           <label for="nama">Masukan nama lengkap</label><br />
           <input
