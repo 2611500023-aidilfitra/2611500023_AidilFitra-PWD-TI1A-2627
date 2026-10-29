@@ -48,7 +48,10 @@ contactForm.addEventListener("submit", (event) => {
     formFeedback.textContent = "Pilih jenis pesan.";
     return;
   }
-  const topikDipilih = document.querySelectorAll('input[name="minat"]:checked');
+  const topikDipilih = document.querySelectorAll(
+    'input[name="minat"]:checked,input[name="minat[]"]:checked',
+  );
+
   if (topikDipilih.length === 0) {
     formFeedback.textContent = "Pilih minimal satu topik yang diminati.";
     return;
