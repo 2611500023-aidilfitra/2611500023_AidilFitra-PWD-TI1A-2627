@@ -18,7 +18,7 @@ const tanggalInput = document.getElementById("tanggal");
 const prodiInput = document.getElementById("prodi");
 const pesanInput = document.getElementById("pesan");
 contactForm.addEventListener("submit", (event) => {
-  // event.preventDefault();
+  event.preventDefault();
   formFeedback.className = "form-feedback-error";
   const nama = namaInput.value.trim();
   if (nama.length < 3 || nama.length > 50) {
