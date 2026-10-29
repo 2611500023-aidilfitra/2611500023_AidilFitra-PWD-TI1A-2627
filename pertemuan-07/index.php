@@ -1,17 +1,9 @@
 <?php
-session_start();
-// P7 : menangkap nilai dari input form, disimpan ke session
-if (isset($_POST["nama"]) && isset($_POST["email"]) && isset($_POST["semester"])) {
-  $_SESSION["nama"] = $_POST["nama"] . " ";
-  $_SESSION["email"] = $_POST["email"] . " ";
-  $_SESSION["semester"] = $_POST["semester"] . " ";
+// P7: penggunaan GET
+if (isset($_GET['nama'])) {
+  $nama = $_GET['nama'];
+  echo "Nama yang diterima: " . htmlspecialchars($nama, ENT_QUOTES, 'UTF-8');
 }
-// P7 : nilai dari session disimpan ke dalam variabel lokal
-$nama = $_SESSION["nama"] ?? "";
-$email = $_SESSION["email"] ?? "";
-$semester = $_SESSION["semester"] ?? "";
-
-// P6: PHP dasar dan pemrograman sisi peladen
 // Bagian 1: Variabel dan konstanta
 $nim = "2611500023";
 $namaMahasiswa = "Aidil Fitra";
@@ -161,7 +153,7 @@ const PROFIL_GITHUB = "2611500023-aidilfitra";
         <a target="_blank" href="https://github.com/<?= PROFIL_GITHUB ?>">profil GitHub saya</a>.
       </p>
 
-      <form id="contactForm" action="index.php" method="post" novalidate>
+      <form id="contactForm" action="index.php" method="get" novalidate>
         <div class="form-group">
           <label for="nama">Masukan nama lengkap</label><br />
           <input
@@ -172,18 +164,16 @@ const PROFIL_GITHUB = "2611500023-aidilfitra";
             placeholder="Masukkan nama lengkap"
             minlength="3"
             maxlength="50"
-            value="<?php echo $nama; ?>"
             required />
         </div>
 
-        <div class=" form-group">
+        <div class="form-group">
           <label for="email">Email</label><br />
           <input
             class="input-form"
             type="email"
             id="email"
             name="email"
-            value="<?= $email; ?>"
             placeholder="nama@email.com"
             required />
         </div>
@@ -195,7 +185,6 @@ const PROFIL_GITHUB = "2611500023-aidilfitra";
             type="number"
             id="semester"
             name="semester"
-            value="<?= $semester; ?>"
             min="1"
             max="14"
             required />
