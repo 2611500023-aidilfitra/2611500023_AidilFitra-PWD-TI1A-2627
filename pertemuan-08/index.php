@@ -180,6 +180,7 @@ if (
 			<ul id="navMenu">
 				<li><a href="#home">Beranda</a></li>
 				<li><a href="#about">Tentang</a></li>
+				<li><a href="#rencana-kegiatan">Rencana Kegiatan</a></li>
 				<li><a href="#contact">Kontak</a></li>
 			</ul>
 		</nav>
@@ -248,7 +249,7 @@ if (
 			</article>
 		</section>
 
-		<section href="#rencana-kegiatan">Rencana Kegiatan
+		<section href="#rencana-kegiatan">
 
 			<section id="rencana-kegiatan" class="rencana-section">
 				<div class="rencana-container">
@@ -357,113 +358,110 @@ if (
 				</div>
 			</section>
 
-		</section>
+			<section id="contact">
+				<h2>Kontak</h2>
 
+				<p>
+					Kunjungi
+					<a target="_blank" href="https://github.com/<?= PROFIL_GITHUB ?>">profil GitHub saya</a>.
+				</p>
 
-		<section id="contact">
-			<h2>Kontak</h2>
+				<form id="contactForm" class="js-contact-form" data-validation="contact" action="index.php" method="post" novalidate>
+					<div class="form-group">
+						<label for="nama">Nama Lengkap</label><br />
 
-			<p>
-				Kunjungi
-				<a target="_blank" href="https://github.com/<?= PROFIL_GITHUB ?>">profil GitHub saya</a>.
-			</p>
+						<input
+							class="input-form"
+							type="text"
+							id="nama"
+							name="nama"
+							placeholder="Masukkan nama lengkap"
+							minlength="3"
+							maxlength="50"
+							required />
+					</div>
 
-			<form id="contactForm" class="js-contact-form" data-validation="contact" action="index.php" method="post" novalidate>
-				<div class="form-group">
-					<label for="nama">Nama Lengkap</label><br />
+					<div class="form-group">
+						<label for="email">Email</label><br />
 
-					<input
-						class="input-form"
-						type="text"
-						id="nama"
-						name="nama"
-						placeholder="Masukkan nama lengkap"
-						minlength="3"
-						maxlength="50"
-						required />
-				</div>
+						<input class="input-form" type="email" id="email" name="email" placeholder="nama@email.com" required />
+					</div>
 
-				<div class="form-group">
-					<label for="email">Email</label><br />
+					<div class="form-group">
+						<label for="semester">Semester</label><br />
 
-					<input class="input-form" type="email" id="email" name="email" placeholder="nama@email.com" required />
-				</div>
+						<input class="input-form" type="number" id="semester" name="semester" min="1" max="14" required />
+					</div>
 
-				<div class="form-group">
-					<label for="semester">Semester</label><br />
+					<div class="form-group">
+						<label for="tanggal">Tanggal Kunjungan</label><br />
 
-					<input class="input-form" type="number" id="semester" name="semester" min="1" max="14" required />
-				</div>
+						<input class="input-form" type="date" id="tanggal" name="tanggal" required />
+					</div>
 
-				<div class="form-group">
-					<label for="tanggal">Tanggal Kunjungan</label><br />
+					<div class="form-group">
+						<p>Jenis Pesan</p>
 
-					<input class="input-form" type="date" id="tanggal" name="tanggal" required />
-				</div>
+						<input type="radio" id="pertanyaan" name="jenis_pesan" value="pertanyaan" required />
+						<label for="pertanyaan">Pertanyaan</label>
 
-				<div class="form-group">
-					<p>Jenis Pesan</p>
+						<input type="radio" id="saran" name="jenis_pesan" value="saran" />
+						<label for="saran">Saran</label>
+					</div>
 
-					<input type="radio" id="pertanyaan" name="jenis_pesan" value="pertanyaan" required />
-					<label for="pertanyaan">Pertanyaan</label>
+					<div class="form-group">
+						<p>Topik yang Diminati</p>
 
-					<input type="radio" id="saran" name="jenis_pesan" value="saran" />
-					<label for="saran">Saran</label>
-				</div>
+						<input type="checkbox" id="minat-html" name="minat[]" value="HTML" />
+						<label for="minat-html">HTML</label>
 
-				<div class="form-group">
-					<p>Topik yang Diminati</p>
+						<input type="checkbox" id="minat-css" name="minat[]" value="CSS" />
+						<label for="minat-css">CSS</label>
+					</div>
 
-					<input type="checkbox" id="minat-html" name="minat[]" value="HTML" />
-					<label for="minat-html">HTML</label>
+					<div class="form-group">
+						<label for="prodi">Program Studi</label><br />
 
-					<input type="checkbox" id="minat-css" name="minat[]" value="CSS" />
-					<label for="minat-css">CSS</label>
-				</div>
+						<select class="input-form" id="prodi" name="prodi" required>
+							<option value="">-- Pilih Program Studi --</option>
+							<option value="SI">Sistem Informasi</option>
+							<option value="TI">Teknik Informatika</option>
+						</select>
+					</div>
 
-				<div class="form-group">
-					<label for="prodi">Program Studi</label><br />
+					<div class="form-group">
+						<label for="pesan">Pesan</label><br />
 
-					<select class="input-form" id="prodi" name="prodi" required>
-						<option value="">-- Pilih Program Studi --</option>
-						<option value="SI">Sistem Informasi</option>
-						<option value="TI">Teknik Informatika</option>
-					</select>
-				</div>
+						<textarea
+							class="input-form"
+							id="pesan"
+							name="pesan"
+							maxlength="300"
+							placeholder="Tulis pesan Anda"
+							required></textarea>
+					</div>
 
-				<div class="form-group">
-					<label for="pesan">Pesan</label><br />
+					<button type="submit">Kirim</button>
+					<button type="reset">Batal</button>
+					<p class="form-feedback" data-form-feedback aria-live="polite"></p>
+				</form>
 
-					<textarea
-						class="input-form"
-						id="pesan"
-						name="pesan"
-						maxlength="300"
-						placeholder="Tulis pesan Anda"
-						required></textarea>
-				</div>
-
-				<button type="submit">Kirim</button>
-				<button type="reset">Batal</button>
-				<p class="form-feedback" data-form-feedback aria-live="polite"></p>
-			</form>
-
-			<?php if (isset($_SESSION["nama"])): ?>
-				<article id="hasilKontak" class="submission-result" aria-live="polite">
-					<h3>Data Formulir yang Dikirim</h3>
-					<p><strong>Nama Lengkap:</strong> <?= htmlspecialchars($_SESSION["nama"] ?? "", ENT_QUOTES, "UTF-8") ?></p>
-					<p><strong>Email:</strong> <?= htmlspecialchars($_SESSION["email"] ?? "", ENT_QUOTES, "UTF-8") ?></p>
-					<p><strong>Semester:</strong> <?= htmlspecialchars($_SESSION["semester"] ?? "", ENT_QUOTES, "UTF-8") ?></p>
-					<p><strong>Tanggal Kunjungan:</strong> <?= htmlspecialchars($_SESSION["tanggal"] ?? "", ENT_QUOTES, "UTF-8") ?></p>
-					<p><strong>Jenis Pesan:</strong> <?= htmlspecialchars($_SESSION["jenis_pesan"] ?? "", ENT_QUOTES, "UTF-8") ?></p>
-					<p><strong>Topik yang Diminati:</strong>
-						<?= htmlspecialchars(implode(", ", $_SESSION["minat"] ?? []), ENT_QUOTES, "UTF-8") ?>
-					</p>
-					<p><strong>Program Studi:</strong> <?= htmlspecialchars($_SESSION["prodi"] ?? "", ENT_QUOTES, "UTF-8") ?></p>
-					<p><strong>Pesan:</strong> <?= nl2br(htmlspecialchars($_SESSION["pesan"] ?? "", ENT_QUOTES, "UTF-8")) ?></p>
-				</article>
-			<?php endif; ?>
-		</section>
+				<?php if (isset($_SESSION["nama"])): ?>
+					<article id="hasilKontak" class="submission-result" aria-live="polite">
+						<h3>Data Formulir yang Dikirim</h3>
+						<p><strong>Nama Lengkap:</strong> <?= htmlspecialchars($_SESSION["nama"] ?? "", ENT_QUOTES, "UTF-8") ?></p>
+						<p><strong>Email:</strong> <?= htmlspecialchars($_SESSION["email"] ?? "", ENT_QUOTES, "UTF-8") ?></p>
+						<p><strong>Semester:</strong> <?= htmlspecialchars($_SESSION["semester"] ?? "", ENT_QUOTES, "UTF-8") ?></p>
+						<p><strong>Tanggal Kunjungan:</strong> <?= htmlspecialchars($_SESSION["tanggal"] ?? "", ENT_QUOTES, "UTF-8") ?></p>
+						<p><strong>Jenis Pesan:</strong> <?= htmlspecialchars($_SESSION["jenis_pesan"] ?? "", ENT_QUOTES, "UTF-8") ?></p>
+						<p><strong>Topik yang Diminati:</strong>
+							<?= htmlspecialchars(implode(", ", $_SESSION["minat"] ?? []), ENT_QUOTES, "UTF-8") ?>
+						</p>
+						<p><strong>Program Studi:</strong> <?= htmlspecialchars($_SESSION["prodi"] ?? "", ENT_QUOTES, "UTF-8") ?></p>
+						<p><strong>Pesan:</strong> <?= nl2br(htmlspecialchars($_SESSION["pesan"] ?? "", ENT_QUOTES, "UTF-8")) ?></p>
+					</article>
+				<?php endif; ?>
+			</section>
 	</main>
 
 	<footer>
