@@ -1,6 +1,70 @@
 <?php
 session_start();
 
+// P8: Memproses data formulir rencana kegiatan dan menyimpannya ke session.
+if (
+	$_SERVER["REQUEST_METHOD"] === "POST"
+	&& isset($_POST["kirim_rencana"])
+) {
+	$namaKegiatan = trim((string) ($_POST["nama_kegiatan"] ?? ""));
+	$kategoriKegiatan = trim((string) ($_POST["kategori_kegiatan"] ?? ""));
+	$tanggalPelaksanaan = trim((string) ($_POST["tanggal_pelaksanaan"] ?? ""));
+	$lokasiKegiatan = trim((string) ($_POST["lokasi_kegiatan"] ?? ""));
+	$deskripsiKegiatan = trim((string) ($_POST["deskripsi_kegiatan"] ?? ""));
+
+	$errors = [];
+
+	if ($namaKegiatan === "") {
+		$errors[] = "Nama kegiatan wajib diisi.";
+	}
+
+	if (!in_array($kategoriKegiatan, [
+		"Akademik",
+		"Olahraga",
+		"Seni dan Budaya",
+		"Sosial",
+		"Lainnya"
+	], true)) {
+		$errors[] = "Pilih kategori kegiatan yang valid.";
+	}
+
+	$tanggalValid = DateTime::createFromFormat("Y-m-d", $tanggalPelaksanaan);
+
+	if (!$tanggalValid || $tanggalValid->format("Y-m-d") !== $tanggalPelaksanaan) {
+		$errors[] = "Tanggal pelaksanaan tidak valid.";
+	}
+
+	if ($lokasiKegiatan === "") {
+		$errors[] = "Lokasi kegiatan wajib diisi.";
+	}
+
+	if ($deskripsiKegiatan === "") {
+		$errors[] = "Deskripsi kegiatan wajib diisi.";
+	}
+
+	if (empty($errors)) {
+		$_SESSION["nama_kegiatan"] = $namaKegiatan;
+		$_SESSION["kategori_kegiatan"] = $kategoriKegiatan;
+		$_SESSION["tanggal_pelaksanaan"] = $tanggalPelaksanaan;
+		$_SESSION["lokasi_kegiatan"] = $lokasiKegiatan;
+		$_SESSION["deskripsi_kegiatan"] = $deskripsiKegiatan;
+	} else {
+		$_SESSION["error_rencana"] = $errors;
+	}
+
+	// PRG: mengarahkan kembali ke section Rencana Kegiatan.
+	header("Location: index.php#rencana-kegiatan");
+	exit;
+}
+$namaKegiatan = $_SESSION["nama_kegiatan"] ?? "";
+$kategoriKegiatan = $_SESSION["kategori_kegiatan"] ?? "";
+$tanggalPelaksanaan = $_SESSION["tanggal_pelaksanaan"] ?? "";
+$lokasiKegiatan = $_SESSION["lokasi_kegiatan"] ?? "";
+$deskripsiKegiatan = $_SESSION["deskripsi_kegiatan"] ?? "";
+$errorRencana = $_SESSION["error_rencana"] ?? [];
+
+unset($_SESSION["error_rencana"]);
+
 // P7: Memproses data formulir dan menyimpannya ke dalam session.
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 	$nama = trim((string) ($_POST["nama"] ?? ""));
@@ -75,80 +139,6 @@ switch ($programStudi) {
 	default:
 		$fokusProgramStudi = "Belum ditentukan";
 }
-
-// Ambil data dari session setelah redirect
-$hasilRencana = $_SESSION['hasil_rencana'] ?? null;
-$errorRencana = $_SESSION['error_rencana'] ?? [];
-$inputRencana = $_SESSION['input_rencana'] ?? [];
-
-unset(
-	$_SESSION['hasil_rencana'],
-	$_SESSION['error_rencana'],
-	$_SESSION['input_rencana']
-);
-
-// Proses formulir
-if (
-	$_SERVER['REQUEST_METHOD'] === 'POST'
-	&& isset($_POST['kirim_rencana'])
-) {
-
-	$nama = trim($_POST['nama_kegiatan'] ?? '');
-	$kategori = trim($_POST['kategori_kegiatan'] ?? '');
-	$tanggal = trim($_POST['tanggal_pelaksanaan'] ?? '');
-	$lokasi = trim($_POST['lokasi_kegiatan'] ?? '');
-	$deskripsi = trim($_POST['deskripsi_kegiatan'] ?? '');
-
-	$data = [
-		'nama' => $nama,
-		'kategori' => $kategori,
-		'tanggal' => $tanggal,
-		'lokasi' => $lokasi,
-		'deskripsi' => $deskripsi
-	];
-
-	$errors = [];
-
-	if ($nama === '') {
-		$errors[] = 'Nama kegiatan wajib diisi.';
-	}
-
-	if (!in_array($kategori, [
-		'Akademik',
-		'Olahraga',
-		'Seni dan Budaya',
-		'Sosial',
-		'Lainnya'
-	], true)) {
-		$errors[] = 'Pilih kategori kegiatan yang valid.';
-	}
-
-	$tanggalValid = DateTime::createFromFormat('Y-m-d', $tanggal);
-
-	if (!$tanggalValid || $tanggalValid->format('Y-m-d') !== $tanggal) {
-		$errors[] = 'Tanggal pelaksanaan tidak valid.';
-	}
-
-	if ($lokasi === '') {
-		$errors[] = 'Lokasi kegiatan wajib diisi.';
-	}
-
-	if ($deskripsi === '') {
-		$errors[] = 'Deskripsi kegiatan wajib diisi.';
-	}
-
-	if (!empty($errors)) {
-		$_SESSION['error_rencana'] = $errors;
-		$_SESSION['input_rencana'] = $data;
-	} else {
-		$_SESSION['hasil_rencana'] = $data;
-	}
-
-	// Post-Redirect-Get (PRG)
-	header('Location: ' . $_SERVER['PHP_SELF'] . '#rencana-kegiatan');
-	exit;
-}
-
 ?>
 <!doctype html>
 <html lang="id">
@@ -334,26 +324,27 @@ if (
 						</div>
 					</form>
 
-					<?php if ($hasilRencana): ?>
+					<?php if ($namaKegiatan !== ""): ?>
 						<div class="hasil-rencana">
-							<h3>Hasil Rencana Kegiatan</h3>
+							<h3>Data Rencana Kegiatan yang Dikirim</h3>
 
 							<p><strong>Nama Kegiatan:</strong>
-								<?= htmlspecialchars($hasilRencana['nama']) ?></p>
+								<?= htmlspecialchars($namaKegiatan) ?></p>
 
 							<p><strong>Kategori:</strong>
-								<?= htmlspecialchars($hasilRencana['kategori']) ?></p>
+								<?= htmlspecialchars($kategoriKegiatan) ?></p>
 
 							<p><strong>Tanggal:</strong>
-								<?= htmlspecialchars($hasilRencana['tanggal']) ?></p>
+								<?= htmlspecialchars($tanggalPelaksanaan) ?></p>
 
 							<p><strong>Lokasi:</strong>
-								<?= htmlspecialchars($hasilRencana['lokasi']) ?></p>
+								<?= htmlspecialchars($lokasiKegiatan) ?></p>
 
 							<p><strong>Deskripsi:</strong>
-								<?= nl2br(htmlspecialchars($hasilRencana['deskripsi'])) ?></p>
+								<?= nl2br(htmlspecialchars($deskripsiKegiatan)) ?></p>
 						</div>
 					<?php endif; ?>
+
 
 				</div>
 			</section>
