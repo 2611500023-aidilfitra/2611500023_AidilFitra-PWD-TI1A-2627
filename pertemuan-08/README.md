@@ -11,4 +11,5 @@
 9. menambahkan styling section rencana kegiatan mahasiswa
 10. mengatur tampilan input label dan tombol formulir
 11. menyesuaikan warna formulir dengan tema website
-12. 
+12. menambahkan responsive design pada formulir rencana kegiatan
+13. 
