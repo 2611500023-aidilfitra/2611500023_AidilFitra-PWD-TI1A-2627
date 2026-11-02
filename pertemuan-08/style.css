@@ -216,7 +216,30 @@ footer p {
 .form-feedback-success {
   color: #2e7d32;
 }
+/* WARNA TEKS SECTION RENCANA KEGIATAN */
+.rencana-section {
+  color: #003366;
+}
 
+.rencana-container h2,
+.rencana-container h3,
+.rencana-container p,
+.rencana-container label {
+  color: #003366;
+}
+
+/* Warna tulisan input */
+.rencana-group input,
+.rencana-group select,
+.rencana-group textarea {
+  color: #003366;
+}
+
+/* Warna placeholder */
+.rencana-group input::placeholder,
+.rencana-group textarea::placeholder {
+  color: #668099;
+}
 /* Layout untuk viewport yang lebih lebar */
 @media (min-width: 768px) {
   nav {
@@ -310,14 +333,18 @@ footer p {
   padding: 12px 25px;
   border: none;
   border-radius: 5px;
-  background-color: #28a745;
+  background-color: #003366;
   color: white;
   cursor: pointer;
   font-size: 15px;
 }
 
 .rencana-buttons .btn-batal {
-  background-color: #dc3545;
+  background-color: #003366;
+}
+
+.rencana-buttons button:hover {
+  background-color: #00509e;
 }
 
 .rencana-alert,
@@ -357,5 +384,8 @@ footer p {
 
   .rencana-buttons button {
     width: 100%;
+  }
+  .rencana-container h2 {
+    color: #003366;
   }
 }
