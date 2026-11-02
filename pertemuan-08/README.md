@@ -1,4 +1,4 @@
-# pertemuan-08 Membuat menu section baru kegiatan maha 
+# pertemuan-08 Membuat menu section baru kegiatan mahasiswa
 
 1. Menyalin artefak pada p8
 2. Menmbahkan menu section baru rencana kegiatan maha siswa
