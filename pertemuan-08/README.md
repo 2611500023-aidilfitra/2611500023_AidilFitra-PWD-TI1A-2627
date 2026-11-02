@@ -12,4 +12,4 @@
 10. mengatur tampilan input label dan tombol formulir
 11. menyesuaikan warna formulir dengan tema website
 12. menambahkan responsive design pada formulir rencana kegiatan
-13. 
+13. menambahkan notifikasi pengiriman formulir
