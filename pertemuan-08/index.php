@@ -341,8 +341,7 @@ switch ($programStudi) {
 								<?= nl2br(htmlspecialchars($deskripsiKegiatan)) ?></p>
 						</div>
 					<?php endif; ?>
-
-
+				</form>
 			</div>
 		</section>
 
