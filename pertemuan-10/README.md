@@ -6,3 +6,4 @@
 4. mengidentifikasi kebutuhan data formulir kontak P10
 5. menentukan data formulir yang akan disimpan ke basis data
 6. menentukan representasi data pilihan minat
+7. menentukan nama basis data dan tabel P10
