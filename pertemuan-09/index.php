@@ -473,7 +473,7 @@ switch ($programStudi) {
 				<article id="hasilkontak" class="submission-result" aria-live="polite">
 					<h3>Data Formulir yang Dikirimkan</h3>
 					<?php foreach ($labelMap as $key => $label): ?>
-						<p><strong><?= $label ?>:/strong> <?= bersihkan($_SESSION["form_data"][$key]) ?></p>
+						<p><strong><?= $label ?>:</strong> <?= bersihkan($_SESSION["form_data"][$key]) ?></p>
 					<?php endforeach; ?>
 					<p><strong>Topik yang Diminati:</strong>
 						<?= bersihkan(implode(", ", $_SESSION["form_data"]["minat"])) ?>
