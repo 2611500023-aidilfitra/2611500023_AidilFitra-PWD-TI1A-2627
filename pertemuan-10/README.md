@@ -14,3 +14,4 @@
 12. memasukkan data awal ke tabel kontak
 13. mempelajari perintah SQL insert
 14. memeriksa data awal pada table kontak 
+15. menentukan pengaturan ekspor basis data
