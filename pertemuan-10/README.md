@@ -9,3 +9,5 @@
 7. menentukan nama basis data dan tabel P10
 8. merancang atribut dan tipe data tabel kontak
 9. menentukan primary key dan auto incerement tabel kontak
+10. memeriksa rancangan akhir struktur tabel kontak  
+11. membuat antara perintah CREATE DATABASE , USE , dan CREATE TABLE
