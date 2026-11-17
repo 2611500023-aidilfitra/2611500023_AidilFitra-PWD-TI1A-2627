@@ -11,3 +11,4 @@
 9. menentukan primary key dan auto incerement tabel kontak
 10. memeriksa rancangan akhir struktur tabel kontak  
 11. membuat antara perintah CREATE DATABASE , USE , dan CREATE TABLE
+12. memasukkan data awal ke tabel kontak
