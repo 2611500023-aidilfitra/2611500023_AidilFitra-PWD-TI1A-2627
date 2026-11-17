@@ -12,3 +12,4 @@
 10. memeriksa rancangan akhir struktur tabel kontak  
 11. membuat antara perintah CREATE DATABASE , USE , dan CREATE TABLE
 12. memasukkan data awal ke tabel kontak
+13. mempelajari perintah SQL insert
