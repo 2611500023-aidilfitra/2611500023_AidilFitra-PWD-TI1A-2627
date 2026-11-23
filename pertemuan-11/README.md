@@ -5,4 +5,5 @@
 3. memeriksa kesiapan basis data dan tabel kontak P11.
 4. membuat berkas koneksi PHP- MySQL P11.
 5. menentukan parameter koneksi basis data P11
-6. 
+6. mengimplementasikan koneksi PHP- MySQL menggunakan MySQLi
+7. 
