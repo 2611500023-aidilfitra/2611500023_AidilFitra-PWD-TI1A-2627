@@ -2,9 +2,9 @@
 
 ## Deskripsi
 
- Pada pertemuan P6 ini dilakukan pengembangan wbsite dengan PHP dasar dan pemrograman sisi peladen yaitu mengubah index.html ke index.php penggunaan sinbtaks dasar PHP, mengelola data menggunakan variabel, konstanta, operator, percabangan dan perulangan. dan mejalankan dengan web lokal server localhost.
+Pada pertemuan P6 ini dilakukan pengembangan wbsite dengan PHP dasar dan pemrograman sisi peladen yaitu mengubah index.html ke index.php penggunaan sinbtaks dasar PHP, mengelola data menggunakan variabel, konstanta, operator, percabangan dan perulangan. dan mejalankan dengan web lokal server localhost.
 
-## Fitur dan pengembangan 
+## Fitur dan pengembangan
 
 - Perubahan file HTML menjadi PHP: Mengganti `index.html` menjadi `index.php` dan menambahkan tag pembuka <?php serta penutup ?> untuk menuliskan kode PHP di dalam halaman.
 - Variabel: Menggunakan tanda $ untuk membuat variabel, contohnya $nama = "Aidil"; untuk menyimpan data nama.
@@ -18,11 +18,12 @@
 ## Cara Menjalankan Websitenya
 
 Menjalankan PHP melalui Laragon: File PHP tidak dapat dijalankan secara langsung dengan klik dua kali, sehingga membutuhkan server lokal untuk memprosesnya. Langkah-langkahnya sebagai berikut:
+
 1. Membuka aplikasi Laragon, kemudian menekan tombol Start All untuk mengaktifkan server.
-2. Membuka browser dan memasukkan alamat http://localhost/PWD/2627o/ti1a/2611500009-PWD-TI1A-2627O/pertemuan-06/.
+2. Membuka browser dan memasukkan alamat http://localhost/PWD/2627o/ti1a/2611500023-PWD-TI1A-2627O/pertemuan-06/.
 3. Mengakses halaman website melalui localhost untuk melihat hasil eksekusi kode PHP.
 
-## Pengujian 
+## Pengujian
 
 1. **Variabel dan konstanta:** Pengujian dilakukan dengan membuka `index.php` melalui localhost dan memeriksa bagian Beranda. Hasilnya, nama, mata kuliah, dan tahun akademik berhasil ditampilkan sesuai data yang telah ditentukan, yaitu "Aidil Fitra", "Pemrograman Web Dasar", dan "2026/2027".
 
@@ -40,7 +41,7 @@ Menjalankan PHP melalui Laragon: File PHP tidak dapat dijalankan secara langsung
 
 8. **Fitur lama (navigasi dan form):** Pengujian dilakukan dengan menekan tombol hamburger (☰) dan mencoba mengirim formulir menggunakan data kosong maupun data yang telah diisi. Hasilnya, menu navigasi dan proses validasi formulir tetap berjalan dengan baik seperti pada versi sebelumnya (`index.html`).
 
-## Riwayat Pengembangan 
+## Riwayat Pengembangan
 
 Riwayat pengembangan proyek dicatat berdasarkan tahapan pengerjaan melalui commit Git yang memiliki keterangan sesuai perubahan yang dilakukan.
 

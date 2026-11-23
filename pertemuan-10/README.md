@@ -38,4 +38,4 @@ Pada P10, yang saya lakukan adalah:
 
 16. Melakukan ekspor database menjadi file SQL. **Pengujian:** Memastikan file `db_pwd_2611500023.sql` berhasil diunduh dan disimpan ke dalam folder `pertemuan-10`.
 
-17. Memastikan file hasil ekspor SQL sudah lengkap. **Pengujian:** Memeriksa isi file untuk memastikan struktur database, tabel `tbl_kontak_2611500023`, sembilan atribut, serta seluruh data awal yang telah dimasukkan sudah tercantum dengan benar.
+17. Memastikan filee hasil ekspor SQL sudah lengkap. **Pengujian:** Memeriksa isi file untuk memastikan struktur database, tabel `tbl_kontak_2611500023`, sembilan atribut, serta seluruh data awal yang telah dimasukkan sudah tercantum dengan benar.
