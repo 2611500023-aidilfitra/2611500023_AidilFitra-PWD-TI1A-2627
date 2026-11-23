@@ -7,4 +7,5 @@
 5. menentukan parameter koneksi basis data P11
 6. mengimplementasikan koneksi PHP- MySQL menggunakan MySQLi
 7. menguji koneksi dari PHP ke MySQL dengan file sementara Bernama uji_koneksi.php
-8.
+8. menguji penanganan kegagalan koneksi PHP- MySQL
+9.
