@@ -12,4 +12,5 @@
 10. menyiapkan pemuatan berkas koneksi pada P11
 11. mengintegrasikan berkas koneksi pada index P11
 12. menentukan kueri SELECT data kontak
-13. 
+13. menjalankan kueri SELECT menggunakan MySQLi
+14. menambahkan pemeriksaan kegagalan kueri SELECT
