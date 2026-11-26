@@ -14,3 +14,4 @@
 12. menentukan kueri SELECT data kontak
 13. menjalankan kueri SELECT menggunakan MySQLi
 14. menambahkan pemeriksaan kegagalan kueri SELECT
+15. mengambil hasil SELECT menggunakan mysqli_fetch_assoc
