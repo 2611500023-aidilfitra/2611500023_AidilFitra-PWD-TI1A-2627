@@ -12,3 +12,4 @@
 10. menyiapkan pemuatan berkas koneksi pada P11
 11. mengintegrasikan berkas koneksi pada index P11
 12. menentukan kueri SELECT data kontak
+13. 
