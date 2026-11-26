@@ -19,15 +19,10 @@ $dataKontak = [];
 while ($baris = mysqli_fetch_assoc($hasil)) {
 	$dataKontak[] = $baris;
 }
-
-// echo "<h1>hai disana</h1>";
-// echo bersihkan("<style>
-// 		* {
-// 			font-weight: bolder;
-// 		}
-// 		</style>");
-// echo bersihkan("<h1>hai disana</h1>");
-// echo bersihkan("<script>alert('hai');</script>");
+// P11: Pengujian sementara hasil pengambilan data.
+echo "<pre>";
+var_dump($dataKontak);
+echo "</pre>";
 
 // P8: Memproses data formulir rencana kegiatan dan menyimpannya ke session.
 if (
