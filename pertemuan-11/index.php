@@ -2,9 +2,8 @@
 #dimatikan pada P11
 #session_start();
 
-require_once("fungsi.php"); #Penggunaan require_once() memastikan berkas tersebut tersedia dan tidak dimuat berulang kali.
-#P11
-require_once("koneksi.php");
+require_once("fungsi.php");
+require_once("koneksi.php"); #P11
 
 // P11: Mengambil data kontak dari basis data menggunakan operasi READ.
 $sql = "SELECT * FROM tbl_kontak_2611500023";
@@ -20,9 +19,9 @@ while ($baris = mysqli_fetch_assoc($hasil)) {
 	$dataKontak[] = $baris;
 }
 // P11: Pengujian sementara hasil pengambilan data.
-echo "<pre>";
-var_dump($dataKontak);
-echo "</pre>";
+// echo "<pre>";
+// var_dump($dataKontak);
+// echo "</pre>";
 
 // P8: Memproses data formulir rencana kegiatan dan menyimpannya ke session.
 if (
@@ -470,29 +469,29 @@ switch ($programStudi) {
 				<p class="form-feedback" data-form-feedback aria-live="polite"></p>
 			</form>
 
-			<?php if (isset($_SESSION["form_data"])): ?>
-				<?php
-				// php Mapping key => label untuk field biasa (string).
-				$labelMap = [
-					"nama"			=> "Nama Lengkap",
-					"email"			=> "Email",
-					"semester"		=> "Semester",
-					"tanggal"		=> "Tanggal Kunjungan",
-					"jenis_pesan"	=> "Jenis Pesan",
-					"prodi"			=> "Program Studi",
-				];
-				?>
-				<article id="hasilkontak" class="submission-result" aria-live="polite">
-					<h3>Data Formulir yang Dikirimkan</h3>
-					<?php foreach ($labelMap as $key => $label): ?>
-						<p><strong><?= $label ?>:</strong> <?= bersihkan($_SESSION["form_data"][$key]) ?></p>
+
+			<article id="hasilkontak" class="submission-result" aria-live="polite">
+				<h3>Data Kontak dari Basis Data</h3>
+				<?php if (count($dataKontak) > 0): ?>
+					<!-- Perulangan foreach untuk menampilkan data kontak. -->
+					<?php foreach ($dataKontak as $data): ?>
+						<section>
+							<!-- Data kontak ditampilkan di sini. -->
+							<p><strong>ID:</strong> <?= bersihkan($data["id"]); ?></p>
+							<p><strong>Nama:</strong> <?= bersihkan($data["nama"]); ?></p>
+							<p><strong>Email:</strong> <?= bersihkan($data["email"]); ?></p>
+							<p><strong>Semester:</strong> <?= bersihkan($data["semester"]); ?></p>
+							<p><strong>Tanggal Kunjungan:</strong> <?= bersihkan($data["tanggal"]); ?></p>
+							<p><strong>Jenis Pesan:</strong> <?= bersihkan($data["jenis_pesan"]); ?></p>
+							<p><strong>Topik yang Diminati:</strong> <?= bersihkan($data["minat"]); ?></p>
+							<p><strong>Program Studi:</strong> <?= bersihkan($data["prodi"]); ?></p>
+							<p><strong>Pesan:</strong> <?= nl2br(bersihkan($data["pesan"])); ?></p>
+						</section>
 					<?php endforeach; ?>
-					<p><strong>Topik yang Diminati:</strong>
-						<?= bersihkan(implode(", ", $_SESSION["form_data"]["minat"])) ?>
-					</p>
-					<p><strong>Pesan:</strong> <?= nl2br(bersihkan($_SESSION["form_data"]["pesan"])) ?></p>
-				</article>
-			<?php endif; ?>
+				<?php else: ?>
+					<p>Belum ada data kontak yang tersimpan.</p>
+				<?php endif; ?>
+			</article>
 		</section>
 	</main>
 

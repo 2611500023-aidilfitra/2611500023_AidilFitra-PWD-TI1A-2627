@@ -16,4 +16,5 @@
 14. menambahkan pemeriksaan kegagalan kueri SELECT
 15. mengambil hasil SELECT menggunakan mysqli_fetch_assoc
 16. memeriksa hasil pengambilan data kontak
-17. 
+17. Menampilkan data kontak dari basis data
+18. 
